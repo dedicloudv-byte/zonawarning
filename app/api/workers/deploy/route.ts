@@ -1,8 +1,6 @@
 import { getCredentials, proxyRequest } from "@/lib/api-helper";
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = 'edge';
-
 export async function POST(req: NextRequest) {
   const creds = getCredentials(req);
   if (!creds.accountId || !creds.key) {

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  /* Luxury Dark Theme */
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --primary: #f59e0b; /* Amber */
+  --primary-glow: rgba(245, 158, 11, 0.5);
+  --accent: #3b82f6; /* Blue */
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Neon Glow */
+.neon-text {
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.neon-border {
+  box-shadow: 0 0 10px var(--primary-glow), inset 0 0 5px var(--primary-glow);
+}

@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = 'edge'; // Optional: Use Edge runtime for speed/Deno compat
-
 export async function POST(req: NextRequest) {
   try {
     const { email, apiToken } = await req.json();

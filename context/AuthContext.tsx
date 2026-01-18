@@ -50,6 +50,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     router.push("/");
   };
 
+  if (isLoading) {
+    return null; // or a loading spinner
+  }
+
   return (
     <AuthContext.Provider
       value={{
